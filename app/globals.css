@@ -23,3 +23,8 @@
 .trans_anim {
   transition: all 0.5s ease;
 }
+
+.fancy_download {
+  box-shadow: 0px 0px 10px 5px #0ff,
+              0px 0px 12px 8px #f0f;
+}

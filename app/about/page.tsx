@@ -1,3 +1,4 @@
+import DownloadButton from "../../components/DownloadButton";
 import StyledHeader from "../../components/styled-header";
 
 export default function About() {
@@ -13,6 +14,11 @@ export default function About() {
         <p className="text-white">
           Hi there! I’m a hardware and software engineer with experience in full-stack web development. I have deep experties in open source tooling, technical writing & communication, and API design. In addition, I have a broad history of working with computer graphics, embedded systems, mobile development, reverse engineering, and robotics.
         </p>
+
+        <div className="flex w-full justify-center my-12">
+          <DownloadButton text="Download My CV" />
+        </div>
+
       </div>
     </div>
   );
