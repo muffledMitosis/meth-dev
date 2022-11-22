@@ -1,6 +1,6 @@
-export default function StyledHeader({ text }: { text: string }) {
+export default function StyledHeader({ text, gradient = true }: { text: string, gradient?: boolean }) {
   return (
-    <div className="styled_header text-5xl">
+    <div className={(gradient ? "core-color-gradient " : "") + " text-5xl"}>
       {text}
     </div>
   );

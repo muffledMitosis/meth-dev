@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <div>
       <main>
-        <div className="border border-red-400 flex w-full h-screen flex-row justify-center items-center">
-          <div>
-            <StyledHeader text="Meth" />
-            <StyledHeader text="Munindradasa" />
+        <div className="flex w-full h-screen flex-row justify-center items-center">
+          <div className="core-color-gradient">
+            <StyledHeader gradient={false} text="Meth" />
+            <StyledHeader gradient={false} text="Munindradasa" />
           </div>
           <div className="w-32"></div>
           <ProfileIcon imageIcon={PFP} />
