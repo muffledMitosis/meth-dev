@@ -37,9 +37,13 @@ export default function Navbar() {
         return elem;
       })}
       <div className="flex">
-        <AiOutlineLinkedin className="text-2xl text-white" />
+        <Link href="https://www.linkedin.com/in/methm/">
+          <AiOutlineLinkedin className="text-2xl text-white" />
+        </Link>
         <div className="w-8" />
-        <AiFillGithub className="text-2xl text-white" />
+        <Link href="https://github.com/muffledMitosis">
+          <AiFillGithub className="text-2xl text-white" />
+        </Link>
       </div>
     </div>
   );
