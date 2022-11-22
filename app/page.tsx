@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <main>
         {/* <div className="flex w-full h-screen flex-row justify-center items-center"> */}
-        <div className="absolute left-1/2 transform translate-y-full -translate-x-1/2">
+        <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
           <div className="flex flex-row items-center justify-center w-full">
             <div>
               <div className="core-color-gradient">
