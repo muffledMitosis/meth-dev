@@ -65,7 +65,7 @@ export default function Navbar() {
         </div>
       </div>
       <GiHamburgerMenu className={(!closed ? "hidden" : "visible") + " text-3xl absolute text-white md:hidden visible right-1 top-1"} onClick={() => setClosed(!closed)} />
-      <div className={(closed ? "hidden" : "visible") + " z-50 bg-dark-background w-1/2 h-screen md:hidden absolute right-0 shadow-2xl"}>
+      <div className={(closed ? "w-0 opacity-0" : "w-1/2 opacity-100") + " z-50 trans_anim bg-dark-background h-screen md:hidden absolute right-0 shadow-2xl"}>
         <AiOutlineClose className="text-3xl absolute text-white md:hidden visible right-1 top-1" onClick={() => setClosed(!closed)} />
         <div className="mt-2 ml-4">
           <div className="flex flex-col bg-dark-background mt-8">

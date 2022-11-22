@@ -20,4 +20,8 @@
   transition: opacity 0.2s ease-in;
 }
 
+.trans_anim {
+  transition: all 0.5s ease;
+}
+
 @keyframes hide_anim {}
