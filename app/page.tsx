@@ -15,8 +15,8 @@ export default function Home() {
                 <StyledHeader gradient={false} text="Meth" />
                 <StyledHeader gradient={false} text="Munindradasa" />
               </div>
-              <div className="text-white font-bold">Full-stack Developer</div>
-              <div className="text-not-selected">Passionate about tech</div>
+              <div className="text-white font-bold text-sm md:text-base">Full-stack Developer</div>
+              <div className="text-not-selected text-sm md:text-base">Passionate about tech</div>
             </div>
             <div className="w-32"></div>
             <ProfileIcon imageIcon={PFP} />

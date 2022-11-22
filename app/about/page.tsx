@@ -3,11 +3,11 @@ import StyledHeader from "../../components/styled-header";
 export default function About() {
   return (
     <div className="flex justify-center">
-      <div className="w-1/2">
+      <div className="w-full p-4 pt-8 md:p-0 md:w-1/2">
 
         <div className="mb-8">
           <StyledHeader gradient={true} text="Meth Munindradasa" />
-          <div className="text-white font-bold">Full-stack Developer</div>
+          <div className="text-white font-bold text-sm md:text-base">Full-stack Developer</div>
         </div>
 
         <p className="text-white">
