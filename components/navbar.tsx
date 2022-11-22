@@ -14,7 +14,7 @@ const pages: string[] = [
   'Dashboard',
 ];
 
-function generateLinks(pages: string[], pathname: any) {
+function generateLinks(pages: string[], pathname: any, isMobile: boolean) {
   let links = pages.map(page => {
 
     const route = page == base ? "/" : page.toLowerCase();
@@ -25,7 +25,7 @@ function generateLinks(pages: string[], pathname: any) {
 
     const elem = (
       <Link
-        className={color + ""}
+        className={color + " " + (isMobile ? " mb-2 text-lg" : "")}
         href={route}
         key={page}>
         {page}
@@ -60,7 +60,7 @@ export default function Navbar() {
     <div>
       <div className="hidden md:visible md:flex justify-center my-10">
         <div className="flex w-2/3 justify-evenly">
-          {generateLinks(pages, pathname)}
+          {generateLinks(pages, pathname, false)}
           {socials()}
         </div>
       </div>
@@ -68,8 +68,8 @@ export default function Navbar() {
       <div className={(closed ? "hidden" : "visible") + " z-50 bg-dark-background w-1/2 h-screen md:hidden absolute right-0 shadow-2xl"}>
         <AiOutlineClose className="text-3xl absolute text-white md:hidden visible right-1 top-1" onClick={() => setClosed(!closed)} />
         <div className="mt-2 ml-4">
-          <div className="flex flex-col bg-dark-background">
-            {generateLinks(pages, pathname)}
+          <div className="flex flex-col bg-dark-background mt-8">
+            {generateLinks(pages, pathname, true)}
           </div>
         </div>
       </div>
