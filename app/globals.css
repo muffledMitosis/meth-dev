@@ -9,3 +9,15 @@
   background-clip: text;
   text-fill-color: transparent;
 }
+
+.anim-hide {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.anim-show {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+@keyframes hide_anim {}

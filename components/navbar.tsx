@@ -1,7 +1,9 @@
 'use client';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AiOutlineLinkedin, AiFillGithub } from 'react-icons/ai';
+import { useState } from "react";
+import { AiOutlineLinkedin, AiFillGithub, AiOutlineClose } from 'react-icons/ai';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const base = 'Home';
 
@@ -52,12 +54,24 @@ function socials() {
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [closed, setClosed] = useState(true);
 
   return (
-    <div className="flex justify-center my-10">
-      <div className="flex w-2/3 justify-evenly">
-        {generateLinks(pages, pathname)}
-        {socials()}
+    <div>
+      <div className="hidden md:visible md:flex justify-center my-10">
+        <div className="flex w-2/3 justify-evenly">
+          {generateLinks(pages, pathname)}
+          {socials()}
+        </div>
+      </div>
+      <GiHamburgerMenu className={(!closed ? "hidden" : "visible") + " text-3xl absolute text-white md:hidden visible right-1 top-1"} onClick={() => setClosed(!closed)} />
+      <div className={(closed ? "hidden" : "visible") + " z-50 bg-dark-background w-1/2 h-screen md:hidden absolute right-0 shadow-2xl"}>
+        <AiOutlineClose className="text-3xl absolute text-white md:hidden visible right-1 top-1" onClick={() => setClosed(!closed)} />
+        <div className="mt-2 ml-4">
+          <div className="flex flex-col bg-dark-background">
+            {generateLinks(pages, pathname)}
+          </div>
+        </div>
       </div>
     </div>
   );
